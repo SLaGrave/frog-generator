@@ -1,14 +1,8 @@
-import javax.swing.JFrame;
+import gui.FrogWindow;
 
 public class FrogGenerator {
     public static void main(String[] args) {
         System.out.println("Hello Froggie World!");
-
-        JFrame f = new JFrame("FrogGenerator");
-        f.setSize(500, 500);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        f.setVisible(true);
-
+        FrogWindow f = new FrogWindow(500, 500);
     }
 }
