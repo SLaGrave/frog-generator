@@ -1,5 +1,7 @@
 package gui;
 
+import hardcodedemo.HardcodeDemo;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -15,21 +17,13 @@ public class FrogWindow {
     private JButton generateButton;
     private JTextArea frogArea;
 
-    private String frogAscii;
+    private HardcodeDemo hd;
 
     public FrogWindow(int width, int height) {
         this.width = width;
         this.height = height;
 
-        frogAscii = "\n" +
-                "    _    _\n" +
-                "   (o)--(o)\n" +
-                "  /.______.\\\n" +
-                "  \\________/\n" +
-                " ./        \\.\n" +
-                "( .        , )\n" +
-                " \\ \\_\\\\//_/ /\n" +
-                "  ~~  ~~  ~~";
+        this.hd = new HardcodeDemo();
 
         // Setup the JFrame and JPanel
         frame = new JFrame("FrogGenerator");
@@ -66,6 +60,6 @@ public class FrogWindow {
     }
 
     private void genFrog() {
-        this.frogArea.setText(this.frogAscii);
+        this.frogArea.setText(this.hd.getFrog());
     }
 }
